@@ -1,0 +1,84 @@
+.wrc_calendar_selectItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  &.selectedStart {
+    background:#2E7EE6 !important;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+
+  &.selectedEnd {
+    background:#2E7EE6 !important;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+
+  &.selected {
+    background:#2E7EE6 !important;
+  }
+
+  &.disabledDate {
+    color: #999;
+
+    .price {
+      color: #999;
+    }
+  }
+
+  &.selected, &.selectedStart, &.selectedEnd {
+    color: white;
+
+    .price {
+      color: white;
+    }
+  }
+}
+.wrc_calendar_disabledText {
+  color: #999;
+}
+.wrc_calendar_footer{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  background: #f9f9f9;
+  .check_footer, .no_check_footer{
+    padding: 15px 20px;
+    font-size: 18px;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-shadow: none;
+    text-align: center;
+    margin: 0em;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 1;
+    align-items: center;
+    display: flex;
+    position: relative;
+    color: white;
+    border-radius: 50px;
+    background: #2E7EE6 linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+    width: 100%;
+    justify-content: center;
+  }
+  .no_check_footer{
+    background: #ccc;
+    border: 0;
+    color: white;
+  }
+}
