@@ -14,7 +14,7 @@ const externalAry = [
   "react",
   "react-dom",
   'moment',
-  'loadsh'
+  'lodash'
 ];
 
 
