@@ -20,7 +20,7 @@ const externalAry = [
 
 const plugins = [
     resolve(),
-    babel({ runtimeHelpers: true }),
+    babel({ runtimeHelpers: true, exclude: '**/node_modules/**' }),
     commonjs({
       // include: "**node_modules/**",
       // namedExports: { react: ["useState", "Component", "useRef", "useEffect"] }
@@ -56,11 +56,17 @@ module.exports = fs.readdirSync(root)
           file: path.resolve(root, item, pkg.main),
           format: 'cjs',
           sourcemap: isDev,
+          globals: {
+            'lodash': '_'
+          }
         }, {
           exports: 'auto',
           file: path.resolve(root, item, pkg.module),
           format: 'es',
           sourcemap: isDev,
+          globals: {
+            'lodash': '_'
+          }
         }
       ],
       plugins: plugins,
