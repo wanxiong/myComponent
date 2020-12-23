@@ -1,0 +1,166 @@
+
+@animate-wrc-default: cubic-bezier(0.25, 0.8, 0.25, 1);
+
+// 屏幕由下到上
+.wrc-default-slide-top-enter{
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.wrc-default-slide-top-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 400ms, transform 400ms @animate-wrc-default;
+}
+
+.wrc-default-slide-top-enter-done {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wrc-default-slide-top-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wrc-default-slide-top-exit-active {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 400ms, transform 400ms @animate-wrc-default;
+}
+
+.wrc-default-slide-top-exit-done {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+
+// 屏幕由上到下
+.wrc-default-slide-bottom-enter{
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.wrc-default-slide-bottom-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 400ms, transform 400ms @animate-wrc-default;
+}
+
+.wrc-default-slide-bottom-enter-done {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wrc-default-slide-bottom-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wrc-default-slide-bottom-exit-active {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 400ms, transform 400ms @animate-wrc-default;
+}
+
+.wrc-default-slide-bottom-exit-done {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+
+// 屏幕由右到左
+.wrc-default-slide-left-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.wrc-default-slide-left-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 400ms, transform 400ms @animate-wrc-default;
+}
+
+.wrc-default-slide-left-enter-done {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.wrc-default-slide-left-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.wrc-default-slide-left-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 400ms, transform 400ms @animate-wrc-default;
+}
+
+.wrc-default-slide-left-exit-done {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+// 屏幕由左到右
+.wrc-default-slide-right-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.wrc-default-slide-right-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 400ms, transform 400ms @animate-wrc-default;
+}
+
+.wrc-default-slide-right-enter-done {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.wrc-default-slide-right-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.wrc-default-slide-right-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 400ms, transform 400ms @animate-wrc-default;
+}
+
+.wrc-default-slide-left-exit-done {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+// fadeIn
+
+.wrc-default-fade-in-enter{
+  opacity: 0;
+}
+
+.wrc-default-fade-in-enter-active {
+  opacity: 1;
+  transition: opacity 400ms, transform 400ms @animate-wrc-default;
+}
+
+.wrc-default-fade-in-enter-done {
+  opacity: 1;
+}
+
+.wrc-default-fade-in-exit {
+  opacity: 1;
+}
+
+.wrc-default-fade-in-exit-active {
+  opacity: 0;
+  transition: opacity 400ms, transform 400ms @animate-wrc-default;
+}
+
+.wrc-default-fade-in-exit-done {
+  opacity: 0;
+}
+
+// fadeInDown
