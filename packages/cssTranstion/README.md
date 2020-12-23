@@ -20,6 +20,47 @@
 | unmountOnExit | 退出时移除dom | Boolean | true |
 | ...restProps | 其他参数 |  |  |
 
+### 动画不够？
+可以自行定义class动画，动画样式格式如下
+
+```css
+// classNames对应的值就是wrc-default-slide-top，安装这样的格式写css即可
+
+@animate-wrc-default: cubic-bezier(0.25, 0.8, 0.25, 1);
+
+.wrc-default-slide-top-enter{
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.wrc-default-slide-top-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 400ms, transform 400ms @animate-wrc-default;
+}
+
+.wrc-default-slide-top-enter-done {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wrc-default-slide-top-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wrc-default-slide-top-exit-active {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 400ms, transform 400ms @animate-wrc-default;
+}
+
+.wrc-default-slide-top-exit-done {
+  opacity: 0;
+  transform: translateY(100%);
+}
+```
+
 
 # 单选日历
 #### 示例代码
