@@ -17,8 +17,8 @@ const externalAry = [
   'lodash'
 ];
 
-
-const plugins = [
+const createPlugin = () => {
+  return [
     resolve(),
     babel({ runtimeHelpers: true, exclude: '**/node_modules/**' }),
     commonjs({
@@ -38,7 +38,8 @@ const plugins = [
       extensions: [".less", ".css"],
     }),
     isDev && terser(),
-]
+  ]
+}
 
 
 module.exports = fs.readdirSync(root)
@@ -69,7 +70,7 @@ module.exports = fs.readdirSync(root)
           }
         }
       ],
-      plugins: plugins,
+      plugins: createPlugin(),
       //  将模块视为外部模块，不会打包在库中
       /*
         external 是一个从外部传入的数组表示不需要被打包的包
